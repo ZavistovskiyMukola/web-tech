@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфоліо — Завістовський М.О.</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0d0d0d;
+      --muted: #555;
+      --primary: #ff6b00;
+      --card: #f5f5f5;
+      --radius: 18px;
+      --max-width: 1100px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 { font-size: 1.3rem; font-weight: 600; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: var(--primary); }
+
+    main { max-width: var(--max-width); margin: 0 auto; padding: 40px 20px; }
+
+    .hero {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 30px;
+      max-width: 80%;
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 14px 30px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: translateY(-4px); }
+
+    section h3 {
+      font-size: 1.7rem;
+      margin: 50px 0 25px;
+      font-weight: 600;
+    }
+    .label {
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-align: right;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .cards {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      flex: 1 1 calc(33.333% - 25px);
+      min-width: 280px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    }
+    .card a { color: var(--primary); text-decoration: none; font-weight: 500; }
+    .card a:hover { text-decoration: underline; }
+
+    .pr-item {
+      background: var(--card);
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: var(--radius);
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .pr-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    }
+    .pr-item img {
+      width: 130px;
+      height: 90px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .photo-sidebar {
+      float: right;
+      width: 280px;
+      margin: 0 0 40px 40px;
+      text-align: center;
+    }
+    .photo-sidebar img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #f0f0f0;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    .photo-sidebar p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    footer {
+      clear: both;
+      text-align: center;
+      padding: 50px;
+      color: #888;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 900px) {
+      .photo-sidebar {
+        float: none;
+        margin: 40px auto;
+      }
+      .hero p { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Завістовський М.О.</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Головна</a></li>
+      <li><a href="#labs">Лабораторні</a></li>
+      <li><a href="#pract">Практичні</a></li>
+      <li><a href="#about">Про мене</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h2>Hi, I am <br><strong>Zavistovskiy Mukola</strong></h2>
+    <p>Студент групи ТЦР-22. Тут зібрані всі мої лабораторні та практичні роботи з дисципліни «Веб-програмування» за 2025 рік.</p>
+    <a class="btn" href="resume.pdf">Download Resume</a>
+  </section>
+
+  <div class="photo-sidebar">
+    <img src="photo_2025-12-08_07-37-30.jpg" alt="Овсієнко Олександр">
+    <p>Завістовський Микола<br>група ТЦР-22</p>
+  </div>
+
+  <section id="labs">
+    <div class="label">2025 рік</div>
+    <h3>Лабораторні роботи</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Лабораторна №1</h4>
+        <p>Форма реєстрації користувача</p>
+        <small>2025</small><br><br>
+        <a href="Переглянути →</a>
+      </div>
+      <div class="card">
+        <h4>Лабораторна №2</h4>
+        <p>CSS селектори та каскад</p>
+        <small>2025</small><br><br>
+        <a href="lab2/index.html" target="_blank">Переглянути →</a>
+      </div>
+      <div class="card">
+        <h4>Лабораторна №3</h4>
+        <p>YouTube клон (Flexbox + Grid)</p>
+        <small>2025</small><br><br>
+        <a href="lab3/index.html" target="_blank">Переглянути →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pract">
+    <h3>Практичні роботи</h3>
+    <div class="pr-item">
+      <img src="pract1.jpg" alt="Практична 1">
+      <div>
+        <h4>Практична №1</h4>
+        <p>Основи HTML — семантична розмітка</p>
+        <small>2025</small>
+      </div>
+    </div>
+    <div class="pr-item">
+      <img src="pract4.jpg" alt="Практична 4">
+      <div>
+        <h4>Практична №4</h4>
+        <p>Компонування за допомогою Grid та Flexbox</p>
+        <small>2025</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>Про мене</h3>
+    <p>Мене звати <strong>Завістовський Микола</strong>, студент групи ТЦР-22.</p>
+    <p>Цікавлюся фронтенд-розробкою, сучасними технологіями, чистими інтерфейсами та анімаціями.</p>
+    <p style="margin-top:20px;">
+      Email: <a href="mailto:st7337676@stud.duikt.edu.ua">st7337676@stud.duikt.edu.ua</a><br>
+      GitHub: <a href="https://github.com/твій-нік" target="_blank">github.com/твій-нік</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 2025 Завістовський Микола • Всі права захищено
+</footer>
+
+</body>
+</html>
