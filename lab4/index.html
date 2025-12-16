@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Planner</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 20px;
+        padding: 0;
+        background: #f9f9f9;
+    }
+
+    .planner {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border: 2px solid #999;
+    }
+
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 300px 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    /* Left column (To do / goals) */
+    .left {
+        grid-row: span 3;
+        border: 1px solid #999;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .list-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .list-block input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: 3px;
+        outline: none;
+    }
+
+    .list-block input[type="checkbox"] {
+        transform: scale(1.2);
+    }
+
+    /* Weekdays */
+    .day {
+        border: 1px solid #999;
+        padding: 10px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .day-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .day textarea {
+        flex: 1;
+        width: 100%;
+        border: none;
+        resize: none;
+        outline: none;
+        font-family: inherit;
+    }
+
+    /* Sunday block — half height */
+    .sunday {
+        min-height: 100px;
+    }
+
+    /* Header row */
+    .header-row {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        width: 150px;
+        border: none;
+        border-bottom: 1px solid #444;
+        outline: none;
+        padding: 3px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="planner">
+
+    <h1>WEEKLY PLAN</h1>
+
+    <!-- Header row with editable fields -->
+    <div class="header-row">
+        <div>WEEK OF <input type="text"></div>
+        <div>HEALTHY HABIT <input type="text"></div>
+        <div>ROCKED IT <input type="checkbox"></div>
+        <div>ROOM FOR IMPROVEMENT <input type="checkbox"></div>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="left">
+            <div>
+                <div class="section-title">TOP 3 GOALS</div>
+                <div class="list-block">
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">EVERYTHING ELSE</div>
+                <div class="list-block">
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">NEXT WEEK</div>
+                <div class="list-block">
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                    <label><input type="checkbox"> <input type="text"></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAYS -->
+        <div class="day"><div class="day-title">MONDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="day"><div class="day-title">TUESDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="day"><div class="day-title">WEDNESDAY <input type="checkbox"></div><textarea></textarea></div>
+
+        <div class="day"><div class="day-title">THURSDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="day"><div class="day-title">FRIDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="day"><div class="day-title">SATURDAY <input type="checkbox"></div><textarea></textarea></div>
+
+        <div class="day sunday"><div class="day-title">SUNDAY <input type="checkbox"></div><textarea></textarea></div>
+
+    </div>
+</div>
+
+</body>
+</html>
